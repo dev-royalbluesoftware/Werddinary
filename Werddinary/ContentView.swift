@@ -13,12 +13,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            VStack {
+                HeaderView()
+                    .padding(.bottom, 20)
+                
+                RandomWordView()
+                    .shadow(radius: 15)
+            }
+            .padding([.leading, .trailing], 24)
+            
+            Spacer()
         }
-        .padding()
+        .background(.softIndigo.opacity(0.2))
     }
 }
 
